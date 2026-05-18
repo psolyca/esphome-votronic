@@ -70,16 +70,18 @@ binary_sensor:
 sensor:
   - platform: votronic
     votronic_id: votronic0
-    battery_voltage:
-      name: "battery voltage"
-    secondary_battery_voltage:
-      name: "secondary battery voltage"
-    current:
-      name: "current"
-    power:
-      name: "power"
-    state_of_charge:
-      name: "state of charge"
+    # These sensor do not exist anymore per https://github.com/psolyca/esphome-votronic/blob/27275bd66825a75d00e0fcfa20034b270d0e5ad7/components/votronic/sensor.py#L34
+    # Or are not used with the charging converter parser.
+    #battery_voltage:
+    #  name: "battery voltage"
+    #secondary_battery_voltage:
+    #  name: "secondary battery voltage"
+    #current:
+    #  name: "current"
+    #power:
+    #  name: "power"
+    #state_of_charge:
+    #  name: "state of charge"
 
     charging_converter_battery_voltage:
       name: "charging converter battery voltage"
